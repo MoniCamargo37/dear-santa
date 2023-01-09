@@ -1,0 +1,17 @@
+<section class="presentsPage">
+<h2>Christmas Presents</h2>
+<div class="searchForm">
+<form method="GET" action="/presents/search"> 
+  <label>Search by name</label>
+  <input type="text" name="name"/>
+  <button type="submit">Search</button>
+</form>
+</div>
+<div class="allPresents">
+  {{#each listOfAllPresents}}
+  <div>
+    {{> presentCard this}}
+  </div>
+  {{/each}}
+</div>
+</section>

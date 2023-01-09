@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 require('./db');
+const hbs = require('hbs');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -11,6 +12,7 @@ const usersRouter = require('./routes/users');
 const app = express();
 
 // view engine setup
+hbs.registerPartials(path.join(__dirname, "/views/partials"));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
@@ -40,3 +42,6 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
+app.listen(3002, () =>
+  console.log("My Spotify project running on http://localhost:3002 🎧 🥁 🎸 🔊")
+);

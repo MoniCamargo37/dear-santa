@@ -1,0 +1,17 @@
+<div class="searchResultsName">
+  <h1>Results by:</h1>
+  <h2>{{query}} </h2>
+  </div>
+<div class="searchResults">
+  {{#if searchPresent}}
+    {{>presentCard searchPresent}}
+      <a  href="/delete/{{_id}}">Remove present from
+      the list</a>
+  {{else}}
+</div>
+<div class="productNotFound"> 
+ <p>Sorry, no presents found by {{query}}. </p>
+ <a  href="/presents"> Go back to presents </a> 
+ <a  href="/presents/new"> Add this item</a>
+ </div>
+  {{/if}}
