@@ -1,15 +1,15 @@
 <section class="detailPage">
   <div class="presentCard">
     <img src="{{this.image}}" alt="present image" />
+      <div class="imgDetails"> 
     <h2>{{name}}</h2>
-    <ul>
-      <li><p>Price:</P> {{price}}</li>
-      <li><p>For:</p>   {{recipient}}</li>
-      <li><p>Details:</p> {{description}}</li>
-    </ul>
+    
+      <li><p>Price:</p>{{price}}</li>   
+      <li> <p>For:</p>{{recipient}}</li>
+      <li> <p>Details:</p>{{description}}</li>
+    </div>
     <a  href="/presents"> Go back to present's list</a>
     <a  href="/delete/{{_id}}">Remove present from
       the list</a>
   </div>
-
 </section>

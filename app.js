@@ -42,6 +42,6 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
-app.listen(3002, () =>
-  console.log("My Spotify project running on http://localhost:3002 🎧 🥁 🎸 🔊")
+app.listen(3001, () =>
+  console.log("My dear Santa project running on http://localhost:3001 🎧 🥁 🎸 🔊")
 );

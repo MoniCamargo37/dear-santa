@@ -34,7 +34,8 @@ router.get('/presents/search', async function (req, res, next) {
     });
 
 
-/* GET /presents/new*/
+/* GET new present form
+Route /presents/new*/
 router.get('/presents/new', function (req, res, next) {
   res.render('newPresent');
 });
@@ -63,8 +64,6 @@ router.get('/delete/:id', async function (req, res, next) {
     next(err);
   }
 });
-
-
 
 /*Get  details of the present.*/
 router.get('/presents/:id', async function(req, res, next) {
