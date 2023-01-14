@@ -197,17 +197,18 @@ body {
   color: #c39717;
 }
 
-.detailPage .presentCard p {
+.detailPage .presentCard b {
   font-size: 16px;
   font-weight: bold;
-  margin-right: 5px;
+  
 }
 
 .detailPage .imgDetails li {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  white-space: nowrap;
+  align-items:flex-start;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .detailPage .imgDetails {
@@ -216,7 +217,7 @@ body {
   padding: 0px;
   text-align: justify;
   align-items: center;
-  margin-right: 50px;
+
 }
 
 /* search Page results */

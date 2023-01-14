@@ -8,6 +8,7 @@ const hbs = require('hbs');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const presentsRouter = require('./routes/presents');
 
 const app = express();
 
@@ -23,7 +24,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/user', usersRouter);
+app.use('/', presentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -42,6 +44,6 @@ app.use(function (err, req, res, next) {
 });
 
 module.exports = app;
-app.listen(3001, () =>
-  console.log("My dear Santa project running on http://localhost:3001 🎧 🥁 🎸 🔊")
+app.listen(3002, () =>
+  console.log("My dear Santa project running on http://localhost:3002 🎧 🥁 🎸 🔊")
 );
